@@ -1,0 +1,12 @@
+# =====================================================================
+# nixpacks.toml - Konfigurasi build/deploy untuk Railway (PaaS)
+# ---------------------------------------------------------------------
+# Instalasi & build memakai deteksi otomatis Nixpacks:
+#   composer install -> npm install -> npm run build (Vite)
+# Yang di-override hanya START command, agar Laravel dijalankan lewat
+# `php artisan serve` dan proses migrate/seed/cache dijalankan dulu.
+# Lihat RAILWAY.md untuk panduan lengkap.
+# =====================================================================
+
+[start]
+cmd = "sh /app/railway-start.sh"
